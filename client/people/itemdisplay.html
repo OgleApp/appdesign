@@ -1,0 +1,12 @@
+<template name="itemdisplay">
+<input type="hidden" id="puzzleID" value="{{_id}}">
+<center>
+<h1 class="jumbotron text-center">{{name}}</h1>
+<h6 class="col-sm-6 text-center">{{description}}</h6>
+<h3 class="col-sm-6 text-center">The {{name}} glasses will cost {{price}} dollars.</h3></center><br><br><br><br>
+<center><img src="{{image}}" id="puzzleNewImage" height="400" width="400"></center>
+<h1 class="text-center"><a href="{{pathFor 'itembuy'}}"><button id="savePuzzle" class="btn btn-success btn-block" aria-hidden="true">Buy</button></a></h1><br><br>
+<button id="goback1" class="btn-block btn-danger">
+			<h3 class="name text-center">Go back!</h3></button><br><br><br>
+
+</template>

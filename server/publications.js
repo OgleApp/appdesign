@@ -1,5 +1,5 @@
 Meteor.publish("theProfiles",function(){return Profiles.find();});
-
+Meteor.publish("theItems", function(){return SellingItems.find();});
 
 Meteor.publish("userData", function () {
   if (this.userId) {

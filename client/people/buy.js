@@ -1,11 +1,15 @@
-Template.buy.events({
-	'click #flyboys': function(event){
-		Router.go
-		},
-	'click #playfarer': function(event){
-		Router.go
+Template.itemLine.rendered= function(){
 
 
-	}
+
+
+
+
+
+}
+Template.buy.helpers({
+	items:function(){
+		return SellingItems.find().fetch();
+	},
 
 })

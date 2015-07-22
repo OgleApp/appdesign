@@ -1,3 +1,14 @@
 <template name="sell">
-
+{{#if isOwner}}
+<h1 class="jumbotron text-center">Enter new selling item.</h1>
+<h5></h5>
+<input class="form-control text-center" id="name" name="Name" placeholder="Name">
+<br>
+<input class="form-control text-center" id="price" name="Price" placeholder="Price">
+<br>
+<textarea type="text" class="text-center form-control" id="description" placeholder="Description" name="Description" rows = "5"></textarea>
+<br><br>
+<input type="text"  class="puzzle3 text-center form-control" id="newpuzzleimage" placeholder="Insert Image URL" name="Answer"/><br><br>
+<h1 class="text-center"><a href=""><button id="saveSellItem" class="btn btn-success btn-block" aria-hidden="true">Submit</button></a></h1>
+{{/if}}
 </template>

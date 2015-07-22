@@ -1,14 +1,26 @@
 <template name= "buy">
 <h1 class="jumbotron text-center">Buy glasses</h1>
-<div class="col-sm-6">
-<h3 class="bg-warning text-center">FlyBoys</h3>
- 	<h3 class="text-center"><small>Buy the flyboys!</small></h3>
- 	<center><button class="btn" id="flyboys">Buy the Flyboys</button></center>
-</div>
-<div class="col-sm-6">
-<h3 class="bg-warning text-center">PlayFarer</h3>
-	<h3 class="text-center"><small>Buy the PlayFarer!</small></h3>
-	<center><button class="btn" id="playfarer">Buy the PlayFarer</button></center>
-</div>
+	<table  class="table table-striped" id="itemlist">
+		<tbody>
+		{{#each items}}
+							{{> itemLine}}
+						{{/each}}
+					
+		</tbody>
 
+	</table>
+
+</template>
+
+<template name="itemLine">
+	<tr>
+		<td><div class="col-md-8">
+		<input type="hidden" id="puzzleID1" value="{{_id}}">	
+
+			
+			<img src="{{image}}" id="puzzleNewImage" height="50" width="50"><a href="{{pathFor 'itemdisplay'}}"><button id="itemlink" class="itemlink btn-info">
+			<h1 class="name text-center">          {{name}} for {{price}} dollars.</h1></button>
+			</a></div>
+		</td>
+	</tr>
 </template>
